@@ -1,8 +1,16 @@
-# python-scaffold
+# flask-scaffold
 
 ## Create virtual environment with dependencies
 
     ./create_venv.sh
+
+## Use development config (with debug mode on)
+
+    export FLASK_ENV=development
+
+## Run flask server
+
+    flask run
 
 ## Run gunicorn server
 
@@ -16,4 +24,4 @@
 
     docker compose up --build
 
-You can remove LISENCE if it is a closed-source project
+You can remove LISENCE if it is a closed-source project.
