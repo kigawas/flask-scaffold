@@ -1,1 +1,7 @@
 flask
+Flask-SQLAlchemy
+Flask-Migrate
+gunicorn
+aiohttp
+aiohttp_wsgi
+redis

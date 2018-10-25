@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redisdb
+    environment:
+      - REDIS_URL=redis://redisdb:6379/1
+      - FLASK_ENV
+
+  redisdb:
+    image: redis:alpine
+    sysctls:
+      net.core.somaxconn: 511

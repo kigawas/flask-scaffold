@@ -1,7 +1,19 @@
 # python-scaffold
 
-## Create virtual environment
+## Create virtual environment with dependencies
 
-    virtualenv venv -p python3 && source venv/bin/activate && which pip && pip install black mypy ipython flake8
+    ./create_venv.sh
 
-## Install necessary dependencies
+## Run gunicorn server
+
+    ./boot.sh
+
+## Build docker image
+
+    docker build .
+
+## Run in docker
+
+    docker compose up --build
+
+You can remove LISENCE if it is a closed-source project
