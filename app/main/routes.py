@@ -1,7 +1,10 @@
 from flask import jsonify, current_app as app
+from sqlalchemy.exc import IntegrityError
 
+from app import db
 from app.main import bp
 from app.errors.handlers import error_response
+from app.models import Table
 
 
 @bp.route("/")
@@ -28,6 +31,27 @@ def get_redis_value(key):
 @bp.route("/redis/<key>/<value>", methods=["PUT"])
 def set_redis_value(key, value):
     return jsonify(set=app.redis.set(key, value))
+
+
+@bp.route("/db/<hash>", methods=["PUT"])
+def set_hash(hash):
+    t = Table(hash=hash)
+    db.session.add(t)
+
+    try:
+        db.session.commit()
+        result = True
+    except IntegrityError as e:
+        app.logger.error(e)
+        result = False
+
+    return jsonify(result=result)
+
+
+@bp.route("/db/<int:id>", methods=["GET"])
+def get_hash(id):
+    t = Table.query.filter_by(id=id).scalar()
+    return jsonify(hash=t.hash if t else "")
 
 
 @bp.route("/error/<int:code>")

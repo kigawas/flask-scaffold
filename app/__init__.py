@@ -51,6 +51,11 @@ def create_app():
 
     app.register_blueprint(main_bp)
 
+    # setup shell context
+    @app.shell_context_processor
+    def make_shell_context():
+        return {"db": db}
+
     # setup request hooks
     @app.before_request
     def before_req():
