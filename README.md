@@ -1,5 +1,9 @@
 # flask-scaffold
 
+A scaffold to speed up launching a flask project.
+
+You can remove LISENCE if you want.
+
 ## Create virtual environment with dependencies
 
     ./create_venv.sh
@@ -23,5 +27,3 @@
 ## Run in docker
 
     docker compose up --build
-
-You can remove LISENCE if it is a closed-source project.
