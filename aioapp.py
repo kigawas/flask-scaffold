@@ -3,8 +3,6 @@ from aiohttp_wsgi import WSGIHandler
 
 from app import create_app
 
-app = create_app()
-
 
 def make_aiohttp_app(app):
     wsgi_handler = WSGIHandler(app)
@@ -13,4 +11,4 @@ def make_aiohttp_app(app):
     return aioapp
 
 
-aioapp = make_aiohttp_app(app)
+aioapp = make_aiohttp_app(create_app())
