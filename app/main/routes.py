@@ -9,7 +9,6 @@ from app.models import Table
 
 @bp.route("/")
 def index():
-    app.logger.warn("Hello")
     return jsonify(hello="scaffold")
 
 

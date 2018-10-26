@@ -20,8 +20,8 @@ migrate = Migrate()
 def create_app():
     # read config
     app = Flask(__name__)
-    config_obj = CONFIG_MAP[app.config["ENV"]]
-    app.config.from_object(config_obj)
+    config = CONFIG_MAP[app.config["ENV"]]
+    app.config.from_object(config)
 
     # customize logger
     app.logger.removeHandler(default_handler)
@@ -36,7 +36,7 @@ def create_app():
     werkzeug_logger.disabled = True
 
     # add customized plugin
-    app.redis = redis.StrictRedis.from_url(config_obj.REDIS_URL)
+    app.redis = redis.StrictRedis.from_url(config.REDIS_URL)
 
     # init 3rd party flask plugins
     db.init_app(app)
