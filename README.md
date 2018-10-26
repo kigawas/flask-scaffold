@@ -4,7 +4,7 @@
 
 A scaffold to speed up launching a flask project, set up with [minimal dependencies](https://github.com/kigawas/flask-scaffold/blob/master/requirements-dev.txt).
 
-You can just remove the LICENSE file as long as you want.
+You can just remove `LICENSE` and `.vscode/` files as long as you want. There is no silver bullet, so if you prefer other libraries or practice, you can change anything if it'll fit your requirements better.
 
 ## Prerequisites
 
@@ -13,6 +13,16 @@ You can just remove the LICENSE file as long as you want.
 -   Supposing `virtualenv` is installed, if not, run `[sudo] pip3 install -U virtualenv` first.
 
 -   (Optional) Docker and docker compose (It's okay if you don't want to use docker.)
+
+## Main features
+
+-   Use blueprints to organize directory structure
+
+-   Colorful logger in terminals, stolen from [tornado](https://github.com/tornadoweb/tornado/blob/master/tornado/log.py)
+
+-   Gunicorn aiohttp server for production use
+
+-   Integrated with static analysis and lint tools like `mypy`, `black`, and `flake8`
 
 ## Common tasks
 
@@ -24,7 +34,7 @@ You can just remove the LICENSE file as long as you want.
 
     export FLASK_ENV=development
 
-## Run development flask server
+### Run development flask server
 
     flask run
 
