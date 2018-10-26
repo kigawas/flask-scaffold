@@ -4,15 +4,15 @@
 
 A scaffold to speed up launching a flask project, set up with [minimal dependencies](https://github.com/kigawas/flask-scaffold/blob/master/requirements-dev.txt).
 
-You can just remove `LICENSE` and `.vscode/` files as long as you want. There is no silver bullet, so if you prefer other libraries or practice, you can change anything if it'll fit your requirements better.
+You can just remove `LICENSE`, `.git/`, and `.vscode/` files whenever it's necessary.
+
+There is no silver bullet, so if you prefer other libraries or practice, you can change anything if you feel there is a better choice.
 
 ## Prerequisites
 
--   Python 3.5+ (Try type hint please!).
+-   Python 3.5+ (Try type hint please!)
 
--   Supposing `virtualenv` is installed, if not, run `[sudo] pip3 install -U virtualenv` first.
-
--   (Optional) Docker and docker compose (It's okay if you don't want to use docker.)
+-   (Optional) Docker and docker compose (It's okay if you don't want to use docker)
 
 ## Main features
 
