@@ -8,9 +8,11 @@ You can just remove the LICENSE file as long as you want.
 
 ## Prerequisites
 
-Python 3.5+ (Try type hint please!).
+-   Python 3.5+ (Try type hint please!).
 
-Supposing `virtualenv` is installed, if not, run `[sudo] pip3 install -U virtualenv` first.
+-   Supposing `virtualenv` is installed, if not, run `[sudo] pip3 install -U virtualenv` first.
+
+-   (Optional) Docker and docker compose (It's okay if you don't want to use docker.)
 
 ## Common tasks
 
@@ -26,11 +28,11 @@ Supposing `virtualenv` is installed, if not, run `[sudo] pip3 install -U virtual
 
     flask run
 
-### Run development gunicorn server
+### Run development gunicorn server with aiohttp worker
 
     gunicorn -b :5000 aioapp:aioapp -k aiohttp.worker.GunicornWebWorker --reload
 
-### Run production gunicorn server
+### Run production gunicorn server (almost same as above)
 
     ./boot.sh
 
@@ -40,7 +42,7 @@ Supposing `virtualenv` is installed, if not, run `[sudo] pip3 install -U virtual
 
 ### Run with docker compose
 
-    docker compose up --build
+    docker-compose up --build
 
 ### Format Python code with black
 
