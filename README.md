@@ -4,13 +4,15 @@
 
 A scaffold to speed up launching a flask project.
 
-You can remove LISENCE if you want.
+You can just remove the LICENSE file if you want.
+
+Supposing `virtualenv` is installed, if not, run `[sudo] pip3 install -U virtualenv` first.
 
 ## Create virtual environment with dependencies
 
     ./create_venv.sh
 
-## Use development config (with debug mode on)
+## Specify development config (with debug mode on)
 
     export FLASK_ENV=development
 
