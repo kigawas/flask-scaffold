@@ -22,7 +22,7 @@ There is no silver bullet, so if you prefer other libraries or practice, you can
 
 -   Gunicorn aiohttp server for production use
 
--   Integrated with static analysis and lint tools like `mypy`, `black`, and `flake8`
+-   Integrated with static analysis and lint tools like `mypy`, `black`, `flake8` and git hook tool [`pre-commit`](https://pre-commit.com/#intro)
 
 ## Common tasks
 
@@ -57,3 +57,7 @@ There is no silver bullet, so if you prefer other libraries or practice, you can
 ### Format Python code with black
 
     black . --exclude venv
+
+### Run git pre-commit hooks
+
+    pre-commit run --all-files

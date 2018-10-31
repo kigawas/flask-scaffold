@@ -3,3 +3,4 @@ mypy
 ipython
 black
 flake8
+pre-commit
