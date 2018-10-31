@@ -17,10 +17,13 @@ db = SQLAlchemy()
 migrate = Migrate()
 
 
-def create_app():
+def create_app(config=None):
     # read config
     app = Flask(__name__)
-    config = CONFIG_MAP[app.config["ENV"]]
+
+    if config is None:
+        config = CONFIG_MAP[app.config["ENV"]]
+
     app.config.from_object(config)
 
     # customize logger

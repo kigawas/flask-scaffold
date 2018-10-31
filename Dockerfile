@@ -4,9 +4,11 @@ WORKDIR /home/scaffold
 COPY app app
 COPY *.py *.txt boot.sh ./
 
-RUN apk update && apk add --no-cache gcc musl-dev gmp-dev libffi-dev make
-RUN python -m venv venv && venv/bin/pip install -U pip && venv/bin/pip install -r requirements.txt && venv/bin/pip install gunicorn
-RUN adduser -D scaffold && chmod +x boot.sh && chown -R scaffold:scaffold ./
+RUN apk update && apk add --virtual .build-deps gcc musl-dev postgresql-dev && \
+    python -m pip install -U pip gunicorn --no-cache-dir && \
+    python -m pip install -r requirements.txt --no-cache-dir && \
+    apk --purge del .build-deps && adduser -D scaffold && chmod +x boot.sh && \
+    chown -R scaffold:scaffold ./
 
 USER scaffold
 EXPOSE 5000
