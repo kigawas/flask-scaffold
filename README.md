@@ -2,7 +2,7 @@
 
 [![Docker Build Status](https://img.shields.io/docker/build/kigawas/flask-scaffold.svg)](https://hub.docker.com/r/kigawas/flask-scaffold/)
 
-[![Circle CI](https://img.shields.io/circleci/project/github/kigawas/flask-scaffold.svg)](https://circleci.com/gh/kigawas/flask-scaffold>)
+[![Circle CI](https://img.shields.io/circleci/project/github/kigawas/flask-scaffold.svg)](https://circleci.com/gh/kigawas/flask-scaffold)
 
 A scaffold to speed up launching a flask project, set up with [minimal dependencies](https://github.com/kigawas/flask-scaffold/blob/master/requirements-dev.txt).
 
