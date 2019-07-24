@@ -1,5 +1,6 @@
 # flask-scaffold
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/81fa5c454ada4729bdbc3c1d8b2722bd)](https://app.codacy.com/app/kigawas/flask-scaffold?utm_source=github.com&utm_medium=referral&utm_content=kigawas/flask-scaffold&utm_campaign=Badge_Grade_Dashboard)
 [![Docker Build Status](https://img.shields.io/docker/build/kigawas/flask-scaffold.svg)](https://hub.docker.com/r/kigawas/flask-scaffold/)
 
 [![Circle CI](https://img.shields.io/circleci/project/github/kigawas/flask-scaffold.svg)](https://circleci.com/gh/kigawas/flask-scaffold)
