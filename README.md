@@ -8,17 +8,17 @@ A scaffold to speed up launching a flask project, set up with [minimal dependenc
 
 You can just remove `LICENSE`, `.git/`, and `.vscode/` files whenever it's necessary.
 
-There is no silver bullet, so if you prefer other libraries or practice, you can change anything if you feel there is a better choice.
+There is no silver bullet, so if you prefer other libraries or practice, you can add or change anything as you like.
 
 ## Prerequisites
 
--   Python 3.5+ (Try type hint please!)
+-   Python 3.5+ (To support type hint)
 
--   (Optional) Docker and docker compose (It's okay if you don't want to use docker)
+-   (Optional) Docker and docker compose
 
 ## Main features
 
--   Use blueprints to organize directory structure
+-   Blueprint templates to organize directory structure
 
 -   Colorful logger in terminals, stolen from [tornado](https://github.com/tornadoweb/tornado/blob/master/tornado/log.py)
 
