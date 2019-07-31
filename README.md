@@ -23,7 +23,7 @@ There is no silver bullet, so if you prefer other libraries or practice, you can
 -   Colorful logger in terminals, stolen from [tornado](https://github.com/tornadoweb/tornado/blob/master/tornado/log.py)
 -   Gunicorn aiohttp server for production use
 -   Integrated with static analysis and lint tools like `mypy`, `black`, `flake8` and git hook tool [`pre-commit`](https://pre-commit.com/#intro)
--   [Circle CI](https://circleci.com/gh/kigawas/flask-scaffold/) and [Heroku](https://scaffold-flask.herokuapp.com/) configuration
+-   Default [Circle CI](https://circleci.com/gh/kigawas/flask-scaffold/) and [Heroku](https://scaffold-flask.herokuapp.com/) configuration
 
 ## Common tasks
 
@@ -43,7 +43,7 @@ There is no silver bullet, so if you prefer other libraries or practice, you can
 
     gunicorn -b :5000 aioapp:aioapp -k aiohttp.worker.GunicornWebWorker --reload
 
-### Run production gunicorn server (almost same as above)
+### Run production gunicorn server
 
     ./boot.sh
 
