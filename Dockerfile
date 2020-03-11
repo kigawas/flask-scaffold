@@ -1,15 +1,13 @@
 FROM python:3.7-alpine
 
-WORKDIR /home/scaffold
 COPY app app
 COPY *.py *.toml boot.sh ./
 
-RUN apk update && apk add --virtual .build-deps gcc libffi-dev musl-dev postgresql-dev && \
-    python -m pip install -U pip gunicorn poetry --no-cache-dir && \
-    poetry install --no-dev && \
-    apk --purge del .build-deps && adduser -D scaffold && chmod +x boot.sh && \
-    chown -R scaffold:scaffold ./
+RUN apk update && apk add --virtual .build-deps gcc curl libffi-dev musl-dev postgresql-dev && \
+    python -m pip install -U pip --no-cache-dir && \
+    curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python && \
+    $HOME/.poetry/bin/poetry install --no-dev && \
+    apk --purge del .build-deps
 
-USER scaffold
 EXPOSE 5000
 ENTRYPOINT ["./boot.sh"]

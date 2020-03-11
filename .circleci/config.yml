@@ -39,9 +39,9 @@ jobs:
       - run:
           name: Run tests
           command: |
-            . venv/bin/activate
-            flask db migrate || flask db upgrade
-            python -m unittest discover .
+            source $HOME/.poetry/env
+            poetry run flask db migrate || poetry run flask db upgrade
+            poetry run python -m unittest discover .
 
       - store_artifacts:
           path: test-reports
