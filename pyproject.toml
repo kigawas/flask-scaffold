@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "flask-scaffold"
+version = "0.1.0"
+description = "A scaffold to speed up launching a flask project"
+authors = [
+    "Weiliang Li <to.be.impressive@gmail.com>"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+flask = "^1.1.1"
+flask-sqlalchemy = "^2.4.1"
+flask-migrate = "^2.5.2"
+gunicorn = "^20.0.4"
+aiohttp = "^3.6.2"
+aiohttp_wsgi = "^0.8.2"
+redis = "^3.4.1"
+psycopg2-binary = "^2.8.4"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.770"
+ipython = "^7.13.0"
+black = "^19.10b0"
+flake8 = "^3.7.9"
+pre-commit = "^2.1.1"
