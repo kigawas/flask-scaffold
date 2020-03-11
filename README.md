@@ -5,7 +5,7 @@
 [![Docker Build Status](https://img.shields.io/docker/build/kigawas/flask-scaffold.svg)](https://hub.docker.com/r/kigawas/flask-scaffold/)
 [![License](https://img.shields.io/github/license/kigawas/flask-scaffold.svg)](https://github.com/kigawas/flask-scaffold)
 
-A scaffold to speed up launching a flask project, set up with [minimal dependencies](https://github.com/kigawas/flask-scaffold/blob/master/requirements-dev.txt).
+A scaffold to speed up launching a flask project, set up with [minimal dependencies](https://github.com/kigawas/flask-scaffold/blob/master/pyproject.toml).
 
 You can just remove `LICENSE`, `.git/`, and `.vscode/` files whenever it's necessary.
 
@@ -13,17 +13,19 @@ There is no silver bullet, so if you prefer other libraries or practice, you can
 
 ## Prerequisites
 
--   Python 3.5+ (To support type hint)
+- Python 3.6+
 
--   (Optional) Docker and docker compose
+- Poetry
+
+- (Optional) Docker and docker compose
 
 ## Main features
 
--   Blueprint templates to organize directory structure
--   Colorful logger in terminals, stolen from [tornado](https://github.com/tornadoweb/tornado/blob/master/tornado/log.py)
--   Gunicorn aiohttp server for production use
--   Integrated with static analysis and lint tools like `mypy`, `black`, `flake8` and git hook tool [`pre-commit`](https://pre-commit.com/#intro)
--   Default [Circle CI](https://circleci.com/gh/kigawas/flask-scaffold/) and [Heroku](https://scaffold-flask.herokuapp.com/) configuration
+- Blueprint templates to organize directory structure
+- Colorful logger in terminals, stolen from [tornado](https://github.com/tornadoweb/tornado/blob/master/tornado/log.py)
+- Gunicorn aiohttp server for production use
+- Integrated with static analysis and lint tools like `mypy`, `black`, `flake8` and git hook tool [`pre-commit`](https://pre-commit.com/#intro)
+- Default [Circle CI](https://circleci.com/gh/kigawas/flask-scaffold/) and [Heroku](https://scaffold-flask.herokuapp.com/) configuration
 
 ## Common tasks
 
