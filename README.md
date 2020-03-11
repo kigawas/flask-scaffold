@@ -31,7 +31,7 @@ There is no silver bullet, so if you prefer other libraries or practice, you can
 
 ### Create virtual environment with dependencies
 
-    ./create_venv.sh
+    python3 -m venv venv && source venv/bin/activate && poetry install
 
 ### Specify development config (with debug mode on)
 
