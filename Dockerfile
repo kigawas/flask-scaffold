@@ -1,7 +1,7 @@
 FROM python:3.7-alpine
 
 COPY app app
-COPY *.py *.toml boot.sh ./
+COPY *.py *.toml *.sh ./
 
 RUN apk update && apk add --virtual .build-deps gcc curl libffi-dev musl-dev postgresql-dev && \
     python -m pip install -U pip --no-cache-dir && \
