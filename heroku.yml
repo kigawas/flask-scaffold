@@ -6,5 +6,5 @@ run:
 
 release:
   command:
-    - ./release-heroku.sh
+    - echo $HOME
   image: web
