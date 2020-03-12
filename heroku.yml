@@ -3,6 +3,8 @@ build:
     web: Dockerfile
 run:
   web: poetry run gunicorn -b $IP:$PORT --access-logfile - --error-logfile - aioapp:aioapp -k aiohttp.worker.GunicornWebWorker
-  release:
-    command: ./release-heroku.sh
-    image: web
+
+release:
+  command:
+    - ./release-heroku.sh
+  image: web
