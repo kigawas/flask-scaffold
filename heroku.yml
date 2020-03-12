@@ -1,10 +1,16 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: DATABASE
+    - plan: heroku-redis
+      as: REDIS
 build:
   docker:
     web: Dockerfile
 run:
-  web: poetry run gunicorn -b $IP:$PORT --access-logfile - --error-logfile - aioapp:aioapp -k aiohttp.worker.GunicornWebWorker
+  web: $HOME/.poetry/bin/poetry run gunicorn -b $IP:$PORT --access-logfile - --error-logfile - aioapp:aioapp -k aiohttp.worker.GunicornWebWorker
 
 release:
   command:
-    - ./release-heroku.sh
+    - $HOME/.poetry/bin/poetry run flask db migrate || $HOME/.poetry/bin/poetry run flask db upgrade
   image: web
