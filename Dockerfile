@@ -1,13 +1,26 @@
 FROM python:3.7-alpine
 
-COPY app app
-COPY *.py *.toml *.sh ./
+ENV USER scaffold
+ENV HOME /home/$USER
 
-RUN apk update && apk add --virtual .build-deps gcc curl libffi-dev musl-dev postgresql-dev && \
-    python -m pip install -U pip --no-cache-dir && \
+RUN apk update && apk add --update sudo curl postgresql-dev && \
+    python -m pip install -U pip --no-cache-dir
+
+RUN adduser -D $USER \
+    && echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER \
+    && chmod 0440 /etc/sudoers.d/$USER
+
+USER $USER
+WORKDIR $HOME
+
+COPY --chown=scaffold:scaffold app app
+COPY --chown=scaffold:scaffold migrations migrations
+COPY --chown=scaffold:scaffold *.py *.toml *.sh ./
+
+RUN sudo apk add --virtual .build-deps gcc libffi-dev musl-dev && \
     curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python && \
     $HOME/.poetry/bin/poetry install --no-dev && \
-    apk --purge del .build-deps
+    sudo apk --purge del .build-deps
 
 EXPOSE 5000
-ENTRYPOINT ["./boot.sh"]
+CMD ["./boot.sh"]
