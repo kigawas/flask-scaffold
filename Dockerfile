@@ -3,7 +3,7 @@ FROM python:3.7-alpine
 ENV USER scaffold
 ENV HOME /home/$USER
 
-RUN apk update && apk add --update sudo curl && \
+RUN apk update && apk add --update sudo curl postgresql-dev && \
     python -m pip install -U pip --no-cache-dir
 
 RUN adduser -D $USER \
@@ -17,7 +17,7 @@ COPY --chown=scaffold:scaffold app app
 COPY --chown=scaffold:scaffold migrations migrations
 COPY --chown=scaffold:scaffold *.py *.toml *.sh ./
 
-RUN sudo apk add --virtual .build-deps gcc libffi-dev musl-dev postgresql-dev && \
+RUN sudo apk add --virtual .build-deps gcc libffi-dev musl-dev && \
     curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python && \
     $HOME/.poetry/bin/poetry install --no-dev && \
     sudo apk --purge del .build-deps
