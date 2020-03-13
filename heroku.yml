@@ -1,3 +1,7 @@
+setup:
+  config:
+    DATABASE_URL: $DATABASE_URL
+    REDIS_URL: $REDIS_URL
 build:
   docker:
     web: Dockerfile
@@ -6,6 +10,5 @@ run:
 
 release:
   command:
-    - echo $DATABASE_URL
     - $HOME/.poetry/bin/poetry run flask db migrate || $HOME/.poetry/bin/poetry run flask db upgrade
   image: web

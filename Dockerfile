@@ -2,6 +2,8 @@ FROM python:3.7-alpine
 
 ENV USER scaffold
 ENV HOME /home/$USER
+ENV DATABASE_URL
+ENV REDIS_URL
 
 RUN apk update && apk add --update sudo curl && \
     python -m pip install -U pip --no-cache-dir
