@@ -1,7 +1,3 @@
-setup:
-  config:
-    DATABASE_URL: $DATABASE_URL
-    REDIS_URL: $REDIS_URL
 build:
   docker:
     web: Dockerfile

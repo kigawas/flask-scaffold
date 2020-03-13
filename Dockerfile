@@ -14,6 +14,7 @@ USER $USER
 WORKDIR $HOME
 
 COPY --chown=scaffold:scaffold app app
+COPY --chown=scaffold:scaffold migrations migrations
 COPY --chown=scaffold:scaffold *.py *.toml *.sh ./
 
 RUN sudo apk add --virtual .build-deps gcc libffi-dev musl-dev postgresql-dev && \
