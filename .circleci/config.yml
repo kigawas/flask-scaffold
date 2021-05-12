@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6
+      - image: circleci/python:3.9
         environment:
           DATABASE_URL: postgresql://scaffold:scaffold@127.0.0.1:5432/test
 

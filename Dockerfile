@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:3.9-alpine
 
 ENV USER scaffold
 ENV HOME /home/$USER
@@ -17,7 +17,7 @@ COPY --chown=scaffold:scaffold app app
 COPY --chown=scaffold:scaffold migrations migrations
 COPY --chown=scaffold:scaffold *.py *.toml *.sh ./
 
-RUN sudo apk add --virtual .build-deps gcc libffi-dev musl-dev && \
+RUN sudo apk add --virtual .build-deps gcc g++ libffi-dev musl-dev && \
     curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python && \
     $HOME/.poetry/bin/poetry install --no-dev && \
     sudo apk --purge del .build-deps
