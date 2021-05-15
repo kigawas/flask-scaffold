@@ -2,14 +2,14 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/81fa5c454ada4729bdbc3c1d8b2722bd)](https://app.codacy.com/app/kigawas/flask-scaffold?utm_source=github.com&utm_medium=referral&utm_content=kigawas/flask-scaffold&utm_campaign=Badge_Grade_Dashboard)
 [![Circle CI](https://img.shields.io/circleci/project/github/kigawas/flask-scaffold.svg)](https://circleci.com/gh/kigawas/flask-scaffold)
-[![Docker Build Status](https://img.shields.io/docker/build/kigawas/flask-scaffold.svg)](https://hub.docker.com/r/kigawas/flask-scaffold/)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/kigawas/flask-scaffold.svg)](https://hub.docker.com/r/kigawas/flask-scaffold/)
 [![License](https://img.shields.io/github/license/kigawas/flask-scaffold.svg)](https://github.com/kigawas/flask-scaffold)
 
 A scaffold to speed up launching a flask project, set up with [minimal dependencies](https://github.com/kigawas/flask-scaffold/blob/master/pyproject.toml).
 
-You can just remove `LICENSE`, `.git/`, and `.vscode/` files whenever it's necessary.
+You can just remove `LICENSE`, `.git/`, and `.vscode/` files if you don't need them.
 
-There is no silver bullet, so if you prefer other libraries or practice, you can add or change anything as you like.
+There is no silver bullet, so if other libraries or practice are preferred, you can add or change anything as you like.
 
 ## Prerequisites
 
