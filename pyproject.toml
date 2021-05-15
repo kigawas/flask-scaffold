@@ -8,7 +8,7 @@ authors = [
 
 [tool.poetry.dependencies]
 python = "^3.6"
-flask = "^1.1.1"
+flask = "^2.0.0"
 flask-sqlalchemy = "^2.4.1"
 flask-migrate = "^2.5.2"
 gunicorn = "^20.0.4"
