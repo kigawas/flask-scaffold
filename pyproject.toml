@@ -20,7 +20,7 @@ psycopg2-binary = "^2.8.6"
 [tool.poetry.dev-dependencies]
 mypy = "^0.812"
 ipython = "^7.16.1"
-black = "^19.10b0"
+black = "^20.8b1"
 flake8 = "^3.7.9"
 pre-commit = "^2.1.1"
 
