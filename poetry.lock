@@ -20,7 +20,7 @@ speedups = ["aiodns", "brotlipy", "cchardet"]
 
 [[package]]
 name = "aiohttp-wsgi"
-version = "0.8.2"
+version = "0.9.1"
 description = "WSGI adapter for aiohttp."
 category = "main"
 optional = false
@@ -749,7 +749,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "6a9d6f5e25e582b9a9f62408471185659b11ce7d1d1fab2d4b16e4231f36604f"
+content-hash = "bf85110aa21e847003c1f9a5abde6828f690f0643374b81eff037b18d220c79a"
 
 [metadata.files]
 aiohttp = [
@@ -792,8 +792,8 @@ aiohttp = [
     {file = "aiohttp-3.7.4.tar.gz", hash = "sha256:5d84ecc73141d0a0d61ece0742bb7ff5751b0657dab8405f899d3ceb104cc7de"},
 ]
 aiohttp-wsgi = [
-    {file = "aiohttp-wsgi-0.8.2.tar.gz", hash = "sha256:5d45a14a3f0fd54609ca7648cbf0362ff9077ef341a6ee9ff3f4ff9591d2289c"},
-    {file = "aiohttp_wsgi-0.8.2-py3-none-any.whl", hash = "sha256:25b143b4b64482b1e219fa1d3253916cf08a3fd1bd3f1aeb55cb2ff8b05e2e33"},
+    {file = "aiohttp-wsgi-0.9.1.tar.gz", hash = "sha256:5d8424f180da1a81ce57aebdceaa2b615ee8bade9e566809196a63483bfd6da9"},
+    {file = "aiohttp_wsgi-0.9.1-py3-none-any.whl", hash = "sha256:4952e4d7f6f12e0213e90a38a54d1069587c4376771b9f007ce3bdf79fefc309"},
 ]
 alembic = [
     {file = "alembic-1.4.1.tar.gz", hash = "sha256:791a5686953c4b366d3228c5377196db2f534475bb38d26f70eb69668efd9028"},
