@@ -13,7 +13,7 @@ flask-sqlalchemy = "^2.5.1"
 flask-migrate = "^3.0.1"
 gunicorn = "^20.1.0"
 aiohttp = "^3.7.4"
-aiohttp_wsgi = "^0.8.2"
+aiohttp_wsgi = "^0.9.1"
 redis = "^3.5.3"
 psycopg2-binary = "^2.9"
 
