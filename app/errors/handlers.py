@@ -1,8 +1,10 @@
+from apiflask import APIBlueprint as Blueprint
 from flask import jsonify
 from werkzeug.http import HTTP_STATUS_CODES
 
 from app import db
-from app.errors import bp
+
+bp = Blueprint("errors", __name__)
 
 
 def error_response(status_code, message=None):

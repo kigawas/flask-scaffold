@@ -1,7 +1,7 @@
+import curses
 import logging
 import logging.handlers
 import sys
-import curses
 
 __all__ = ["get_handler"]
 

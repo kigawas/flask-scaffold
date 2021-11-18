@@ -9,7 +9,35 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: python:3.10
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: scaffold
+          POSTGRES_PASSWORD: scaffold
+          POSTGRES_DB: test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
       - uses: actions/checkout@v2
-      - uses: docker/build-push-action@v2
+      - uses: abatilo/actions-poetry@v2.0.0
+        with:
+            poetry-version: 1.1.11
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/pypoetry/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+      - run: poetry install --no-dev
+      - name: Run test
+        run: |
+          poetry run flask db migrate || poetry run flask db upgrade
+          poetry run python -m unittest discover .
+        env:
+          DATABASE_URL: postgres://scaffold:scaffold@postgres:5432/test

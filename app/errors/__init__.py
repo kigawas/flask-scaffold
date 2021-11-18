@@ -1,5 +1,3 @@
-from flask import Blueprint
+from .handlers import bp
 
-bp = Blueprint("errors", __name__)
-
-from app.errors import handlers  # noqa
+__all__ = ("bp",)
