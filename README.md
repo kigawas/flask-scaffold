@@ -1,7 +1,7 @@
 # flask-scaffold
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/81fa5c454ada4729bdbc3c1d8b2722bd)](https://app.codacy.com/app/kigawas/flask-scaffold?utm_source=github.com&utm_medium=referral&utm_content=kigawas/flask-scaffold&utm_campaign=Badge_Grade_Dashboard)
-[![Circle CI](https://img.shields.io/circleci/project/github/kigawas/flask-scaffold.svg)](https://circleci.com/gh/kigawas/flask-scaffold)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/81fa5c454ada4729bdbc3c1d8b2722bd)](https://app.codacy.com/app/kigawas/flask-scaffold)
+[![Github Actions](https://img.shields.io/github/checks-status/kigawas/flask-scaffold/master)](https://github.com/kigawas/flask-scaffold/actions)
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/kigawas/flask-scaffold.svg)](https://hub.docker.com/r/kigawas/flask-scaffold/)
 [![License](https://img.shields.io/github/license/kigawas/flask-scaffold.svg)](https://github.com/kigawas/flask-scaffold)
 
@@ -13,7 +13,7 @@ There is no silver bullet, so if other libraries or practice are preferred, you 
 
 ## Prerequisites
 
-- Python 3.6+
+- Python 3.7+
 
 - Poetry
 
@@ -21,11 +21,12 @@ There is no silver bullet, so if other libraries or practice are preferred, you 
 
 ## Main features
 
+- [APIFlask](https://apiflask.com/)
 - Blueprint templates to organize directory structure
 - Colorful logger in terminals, stolen from [tornado](https://github.com/tornadoweb/tornado/blob/master/tornado/log.py)
 - Gunicorn aiohttp server for production use
 - Integrated with static analysis and lint tools like `mypy`, `black`, `flake8` and git hook tool [`pre-commit`](https://pre-commit.com/#intro)
-- Default [Circle CI](https://circleci.com/gh/kigawas/flask-scaffold/) and [Heroku](https://scaffold-flask.herokuapp.com/) configuration
+- Default [Github Actions](https://github.com/kigawas/flask-scaffold/actions) and [Heroku](https://scaffold-flask.herokuapp.com/) configuration
 
 ## Common tasks
 

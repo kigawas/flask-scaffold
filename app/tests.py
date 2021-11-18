@@ -2,8 +2,8 @@
 import unittest
 
 from app import create_app, db
+from app.config import Config
 from app.models import Table
-from config import Config
 
 
 class TestConfig(Config):

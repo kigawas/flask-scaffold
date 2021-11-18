@@ -1,17 +1,15 @@
 import logging
 import time
 
-from flask import Flask, request, g
-from flask.logging import default_handler
-
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-
 import redis
+from apiflask import APIFlask as Flask
+from flask import g, request
+from flask.logging import default_handler
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
 
-from config import CONFIG_MAP
-from logger import get_handler
-
+from .config import CONFIG_MAP
+from .logger import get_handler
 
 db = SQLAlchemy()
 migrate = Migrate()

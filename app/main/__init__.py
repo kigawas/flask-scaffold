@@ -1,5 +1,3 @@
-from flask import Blueprint
+from .routes import bp
 
-bp = Blueprint("main", __name__)
-
-from app.main import routes  # noqa
+__all__ = ("bp",)

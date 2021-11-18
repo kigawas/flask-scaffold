@@ -1,10 +1,13 @@
-from flask import jsonify, current_app as app
+from apiflask import APIBlueprint as Blueprint
+from flask import current_app as app
+from flask import jsonify
 from sqlalchemy.exc import IntegrityError
 
 from app import db
-from app.main import bp
 from app.errors.handlers import error_response
 from app.models import Table
+
+bp = Blueprint("main", __name__)
 
 
 @bp.route("/")
