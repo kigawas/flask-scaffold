@@ -10,7 +10,7 @@ authors = [
 python = "^3.7"
 
 # flask
-APIFlask = "^0.10.0"
+APIFlask = "^0.10.1"
 flask = "^2.0.2"
 flask-sqlalchemy = "^2.5.1"
 flask-migrate = "^3.1.0"
