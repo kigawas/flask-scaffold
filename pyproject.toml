@@ -27,7 +27,7 @@ hiredis = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.930"
-ipython = "^7.30.1"
+ipython = "^7.31.0"
 black = "^21.12b0"
 flake8 = "^4.0.1"
 pre-commit = "^2.16.0"
