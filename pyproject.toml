@@ -26,7 +26,7 @@ redis = "^4.1.0"
 hiredis = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
-mypy = "^0.930"
+mypy = "^0.931"
 ipython = "^7.31.0"
 black = "^21.12b0"
 flake8 = "^4.0.1"
