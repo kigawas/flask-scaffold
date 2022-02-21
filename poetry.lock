@@ -22,7 +22,7 @@ speedups = ["aiodns", "brotli", "cchardet"]
 
 [[package]]
 name = "aiohttp-wsgi"
-version = "0.9.1"
+version = "0.10.0"
 description = "WSGI adapter for aiohttp."
 category = "main"
 optional = false
@@ -954,7 +954,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "6ee03eaf71e31459a6ac8d9c66d26965a7c2aac2f581b0149a3655d056f56b15"
+content-hash = "9626cd880cf05c3baa2c64b62333201c281a6466b8561e4b62256ae01b8ef7ca"
 
 [metadata.files]
 aiohttp = [
@@ -1032,8 +1032,8 @@ aiohttp = [
     {file = "aiohttp-3.8.1.tar.gz", hash = "sha256:fc5471e1a54de15ef71c1bc6ebe80d4dc681ea600e68bfd1cbce40427f0b7578"},
 ]
 aiohttp-wsgi = [
-    {file = "aiohttp-wsgi-0.9.1.tar.gz", hash = "sha256:5d8424f180da1a81ce57aebdceaa2b615ee8bade9e566809196a63483bfd6da9"},
-    {file = "aiohttp_wsgi-0.9.1-py3-none-any.whl", hash = "sha256:4952e4d7f6f12e0213e90a38a54d1069587c4376771b9f007ce3bdf79fefc309"},
+    {file = "aiohttp-wsgi-0.10.0.tar.gz", hash = "sha256:bc4dfabb56eadbe53662b2f13c2309350bd17e282ca4250301012adb65b84f49"},
+    {file = "aiohttp_wsgi-0.10.0-py3-none-any.whl", hash = "sha256:e10da72eb430cbfd5cd5a90f49c244859c52a20619fa548aea2f64d8bf197fd7"},
 ]
 aiosignal = [
     {file = "aiosignal-1.2.0-py3-none-any.whl", hash = "sha256:26e62109036cd181df6e6ad646f91f0dcfd05fe16d0cb924138ff2ab75d64e3a"},
