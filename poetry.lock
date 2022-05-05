@@ -61,7 +61,7 @@ tz = ["python-dateutil"]
 
 [[package]]
 name = "apiflask"
-version = "0.12.0"
+version = "1.0.0"
 description = "A lightweight web API framework based on Flask and marshmallow-code projects."
 category = "main"
 optional = false
@@ -958,7 +958,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "a4d9a9577474d99d08665f7e4b7f0e95875e2b7cf18cde63cfdc5ed8aece0b54"
+content-hash = "061fa27a60d051c8c27023f06232bf4af830b1a90a20471b1938b3d89e6fed2f"
 
 [metadata.files]
 aiohttp = [
@@ -1048,8 +1048,8 @@ alembic = [
     {file = "alembic-1.7.5.tar.gz", hash = "sha256:7c328694a2e68f03ee971e63c3bd885846470373a5b532cf2c9f1601c413b153"},
 ]
 apiflask = [
-    {file = "APIFlask-0.12.0-py3-none-any.whl", hash = "sha256:f61be53b4da528a1c098ee24d3e7601a7741d886f956082bb59cf9fc975dc60f"},
-    {file = "APIFlask-0.12.0.tar.gz", hash = "sha256:00e75a9d0b73d9318e6d4a708b6cc865e024da7b3bf420701254e73c4ae407ba"},
+    {file = "APIFlask-1.0.0-py3-none-any.whl", hash = "sha256:be248a1976c7645dac6f0dbca4f2974816c4c8a77a74656feddbe8baf5ab4411"},
+    {file = "APIFlask-1.0.0.tar.gz", hash = "sha256:bb5d5344283532b6bbf9a44e7e550ff3218f9774744ffa347c6b5594684f8d38"},
 ]
 apispec = [
     {file = "apispec-5.1.1-py3-none-any.whl", hash = "sha256:5bc5404b19259aeeb307ce9956e2c1a97722c6a130ef414671dfc21acd622afc"},
