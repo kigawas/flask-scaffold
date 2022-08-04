@@ -267,14 +267,14 @@ testing = ["covdefaults (>=1.2.0)", "coverage (>=4)", "pytest (>=4)", "pytest-co
 
 [[package]]
 name = "flake8"
-version = "5.0.3"
+version = "5.0.4"
 description = "the modular source code checker: pep8 pyflakes and co"
 category = "dev"
 optional = false
 python-versions = ">=3.6.1"
 
 [package.dependencies]
-importlib-metadata = {version = "<4.3", markers = "python_version < \"3.8\""}
+importlib-metadata = {version = ">=1.1.0,<4.3", markers = "python_version < \"3.8\""}
 mccabe = ">=0.7.0,<0.8.0"
 pycodestyle = ">=2.9.0,<2.10.0"
 pyflakes = ">=2.5.0,<2.6.0"
@@ -961,7 +961,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "6ee29721a7dd93e5b9b265b696cfb7fa4974ac50496d67fb7fcfec1ca6bcb05c"
+content-hash = "5a92973f0fc8c07efdc64f63f53a20bd8a9b46efa6af573af3a18907cbea55df"
 
 [metadata.files]
 aiohttp = [
@@ -1140,8 +1140,8 @@ filelock = [
     {file = "filelock-3.4.0.tar.gz", hash = "sha256:93d512b32a23baf4cac44ffd72ccf70732aeff7b8050fcaf6d3ec406d954baf4"},
 ]
 flake8 = [
-    {file = "flake8-5.0.3-py2.py3-none-any.whl", hash = "sha256:93aa565ae2f0316b95bb57a354f2b2d55ee8508e1fe1cb13b77b9c195b4a2537"},
-    {file = "flake8-5.0.3.tar.gz", hash = "sha256:b27fd7faa8d90aaae763664a489012292990388e5d3604f383b290caefbbc922"},
+    {file = "flake8-5.0.4-py2.py3-none-any.whl", hash = "sha256:7a1cf6b73744f5806ab95e526f6f0d8c01c66d7bbe349562d22dfca20610b248"},
+    {file = "flake8-5.0.4.tar.gz", hash = "sha256:6fbe320aad8d6b95cec8b8e47bc933004678dc63095be98528b7bdd2a9f510db"},
 ]
 flask = [
     {file = "Flask-2.2.1-py3-none-any.whl", hash = "sha256:3c604c48c3d5b4c63e72134044c0b4fe90ff01ef65280b9fe2d38c8860d99fe5"},
