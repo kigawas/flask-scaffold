@@ -61,7 +61,7 @@ tz = ["python-dateutil"]
 
 [[package]]
 name = "apiflask"
-version = "1.1.1"
+version = "1.1.2"
 description = "A lightweight web API framework based on Flask and marshmallow-code projects."
 category = "main"
 optional = false
@@ -89,13 +89,13 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-dev = ["PyYAML (>=3.10)", "prance[osv] (>=0.11)", "marshmallow (>=3.13.0)", "pytest", "mock", "flake8 (==3.9.2)", "flake8-bugbear (==21.9.1)", "pre-commit (>=2.4,<3.0)", "tox"]
-docs = ["marshmallow (>=3.13.0)", "pyyaml (==5.4.1)", "sphinx (==4.2.0)", "sphinx-issues (==1.2.0)", "sphinx-rtd-theme (==1.0.0)"]
-lint = ["flake8 (==3.9.2)", "flake8-bugbear (==21.9.1)", "pre-commit (>=2.4,<3.0)"]
-marshmallow = ["marshmallow (>=3.13.0)"]
-tests = ["PyYAML (>=3.10)", "prance[osv] (>=0.11)", "marshmallow (>=3.13.0)", "pytest", "mock"]
-validation = ["prance[osv] (>=0.11)"]
 yaml = ["PyYAML (>=3.10)"]
+validation = ["prance[osv] (>=0.11)"]
+tests = ["mock", "pytest", "marshmallow (>=3.13.0)", "prance[osv] (>=0.11)", "PyYAML (>=3.10)"]
+marshmallow = ["marshmallow (>=3.13.0)"]
+lint = ["pre-commit (>=2.4,<3.0)", "flake8-bugbear (==21.9.1)", "flake8 (==3.9.2)"]
+docs = ["sphinx-rtd-theme (==1.0.0)", "sphinx-issues (==1.2.0)", "sphinx (==4.2.0)", "pyyaml (==5.4.1)", "marshmallow (>=3.13.0)"]
+dev = ["tox", "pre-commit (>=2.4,<3.0)", "flake8-bugbear (==21.9.1)", "flake8 (==3.9.2)", "mock", "pytest", "marshmallow (>=3.13.0)", "prance[osv] (>=0.11)", "PyYAML (>=3.10)"]
 
 [[package]]
 name = "appnope"
@@ -179,10 +179,10 @@ typed-ast = {version = ">=1.4.2", markers = "python_version < \"3.8\" and implem
 typing-extensions = {version = ">=3.10.0.0", markers = "python_version < \"3.10\""}
 
 [package.extras]
-colorama = ["colorama (>=0.4.3)"]
-d = ["aiohttp (>=3.7.4)"]
-jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
 uvloop = ["uvloop (>=0.15.2)"]
+jupyter = ["tokenize-rt (>=3.2.0)", "ipython (>=7.8.0)"]
+d = ["aiohttp (>=3.7.4)"]
+colorama = ["colorama (>=0.4.3)"]
 
 [[package]]
 name = "cfgv"
@@ -243,7 +243,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 wrapt = ">=1.10,<2"
 
 [package.extras]
-dev = ["tox", "bump2version (<1)", "sphinx (<2)", "importlib-metadata (<3)", "importlib-resources (<4)", "configparser (<5)", "sphinxcontrib-websupport (<2)", "zipp (<2)", "PyTest (<5)", "PyTest-Cov (<2.6)", "pytest", "pytest-cov"]
+dev = ["pytest-cov", "pytest", "PyTest-Cov (<2.6)", "PyTest (<5)", "zipp (<2)", "sphinxcontrib-websupport (<2)", "configparser (<5)", "importlib-resources (<4)", "importlib-metadata (<3)", "sphinx (<2)", "bump2version (<1)", "tox"]
 
 [[package]]
 name = "distlib"
@@ -262,8 +262,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-docs = ["furo (>=2021.8.17b43)", "sphinx (>=4.1)", "sphinx-autodoc-typehints (>=1.12)"]
-testing = ["covdefaults (>=1.2.0)", "coverage (>=4)", "pytest (>=4)", "pytest-cov", "pytest-timeout (>=1.4.2)"]
+testing = ["pytest-timeout (>=1.4.2)", "pytest-cov", "pytest (>=4)", "coverage (>=4)", "covdefaults (>=1.2.0)"]
+docs = ["sphinx-autodoc-typehints (>=1.12)", "sphinx (>=4.1)", "furo (>=2021.8.17b43)"]
 
 [[package]]
 name = "flake8"
@@ -295,8 +295,8 @@ Jinja2 = ">=3.0"
 Werkzeug = ">=2.2.2"
 
 [package.extras]
-async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
+async = ["asgiref (>=3.2)"]
 
 [[package]]
 name = "flask-httpauth"
@@ -323,11 +323,11 @@ marshmallow = ">=2.0.0"
 six = ">=1.9.0"
 
 [package.extras]
-dev = ["flask-sqlalchemy", "pytest", "mock", "flake8 (==3.8.3)", "pre-commit (>=2.4,<3.0)", "tox", "marshmallow-sqlalchemy (>=0.13.0,<0.19.0)", "flake8-bugbear (==20.1.4)", "marshmallow-sqlalchemy (>=0.13.0)"]
-docs = ["marshmallow-sqlalchemy (>=0.13.0)", "Sphinx (==3.2.1)", "sphinx-issues (==1.2.0)"]
-lint = ["flake8 (==3.8.3)", "pre-commit (>=2.4,<3.0)", "flake8-bugbear (==20.1.4)"]
-sqlalchemy = ["flask-sqlalchemy", "marshmallow-sqlalchemy (>=0.13.0,<0.19.0)", "marshmallow-sqlalchemy (>=0.13.0)"]
-tests = ["flask-sqlalchemy", "pytest", "mock", "marshmallow-sqlalchemy (>=0.13.0,<0.19.0)", "marshmallow-sqlalchemy (>=0.13.0)"]
+tests = ["marshmallow-sqlalchemy (>=0.13.0)", "marshmallow-sqlalchemy (>=0.13.0,<0.19.0)", "mock", "pytest", "flask-sqlalchemy"]
+sqlalchemy = ["marshmallow-sqlalchemy (>=0.13.0)", "marshmallow-sqlalchemy (>=0.13.0,<0.19.0)", "flask-sqlalchemy"]
+lint = ["flake8-bugbear (==20.1.4)", "pre-commit (>=2.4,<3.0)", "flake8 (==3.8.3)"]
+docs = ["sphinx-issues (==1.2.0)", "Sphinx (==3.2.1)", "marshmallow-sqlalchemy (>=0.13.0)"]
+dev = ["marshmallow-sqlalchemy (>=0.13.0)", "flake8-bugbear (==20.1.4)", "marshmallow-sqlalchemy (>=0.13.0,<0.19.0)", "tox", "pre-commit (>=2.4,<3.0)", "flake8 (==3.8.3)", "mock", "pytest", "flask-sqlalchemy"]
 
 [[package]]
 name = "flask-migrate"
@@ -442,8 +442,8 @@ python-versions = ">=3.6"
 zipp = {version = ">=3.1.0", markers = "python_version < \"3.10\""}
 
 [package.extras]
-docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "pytest-black (>=0.3.7)", "pytest-mypy"]
+testing = ["pytest-mypy", "pytest-black (>=0.3.7)", "pytest-enabler (>=1.0.1)", "pytest-cov", "pytest-flake8", "pytest-checkdocs (>=2.4)", "pytest (>=6)"]
+docs = ["rst.linker (>=1.9)", "jaraco.packaging (>=8.2)", "sphinx"]
 
 [[package]]
 name = "ipython"
@@ -778,8 +778,8 @@ packaging = ">=20.4"
 typing-extensions = {version = "*", markers = "python_version < \"3.8\""}
 
 [package.extras]
+ocsp = ["requests (>=2.26.0)", "pyopenssl (==20.0.1)", "cryptography (>=36.0.1)"]
 hiredis = ["hiredis (>=1.0.0)"]
-ocsp = ["cryptography (>=36.0.1)", "pyopenssl (==20.0.1)", "requests (>=2.26.0)"]
 
 [[package]]
 name = "six"
@@ -905,11 +905,11 @@ python-versions = ">=3.6"
 marshmallow = ">=3.0.0"
 
 [package.extras]
-dev = ["pytest", "webtest (==2.0.35)", "webtest-aiohttp (==2.0.0)", "pytest-aiohttp (>=0.3.0)", "Flask (>=0.12.5)", "Django (>=2.2.0)", "bottle (>=0.12.13)", "tornado (>=4.5.2)", "pyramid (>=1.9.1)", "falcon (>=2.0.0)", "aiohttp (>=3.0.8)", "mypy (==0.910)", "flake8 (==3.9.2)", "flake8-bugbear (==21.4.3)", "pre-commit (>=2.4,<3.0)", "tox"]
-docs = ["Sphinx (==4.1.2)", "sphinx-issues (==1.2.0)", "furo (==2021.8.11b42)", "Flask (>=0.12.5)", "Django (>=2.2.0)", "bottle (>=0.12.13)", "tornado (>=4.5.2)", "pyramid (>=1.9.1)", "falcon (>=2.0.0)", "aiohttp (>=3.0.8)"]
-frameworks = ["Flask (>=0.12.5)", "Django (>=2.2.0)", "bottle (>=0.12.13)", "tornado (>=4.5.2)", "pyramid (>=1.9.1)", "falcon (>=2.0.0)", "aiohttp (>=3.0.8)"]
-lint = ["mypy (==0.910)", "flake8 (==3.9.2)", "flake8-bugbear (==21.4.3)", "pre-commit (>=2.4,<3.0)"]
-tests = ["pytest", "webtest (==2.0.35)", "webtest-aiohttp (==2.0.0)", "pytest-aiohttp (>=0.3.0)", "Flask (>=0.12.5)", "Django (>=2.2.0)", "bottle (>=0.12.13)", "tornado (>=4.5.2)", "pyramid (>=1.9.1)", "falcon (>=2.0.0)", "aiohttp (>=3.0.8)"]
+tests = ["aiohttp (>=3.0.8)", "falcon (>=2.0.0)", "pyramid (>=1.9.1)", "tornado (>=4.5.2)", "bottle (>=0.12.13)", "Django (>=2.2.0)", "Flask (>=0.12.5)", "pytest-aiohttp (>=0.3.0)", "webtest-aiohttp (==2.0.0)", "webtest (==2.0.35)", "pytest"]
+lint = ["pre-commit (>=2.4,<3.0)", "flake8-bugbear (==21.4.3)", "flake8 (==3.9.2)", "mypy (==0.910)"]
+frameworks = ["aiohttp (>=3.0.8)", "falcon (>=2.0.0)", "pyramid (>=1.9.1)", "tornado (>=4.5.2)", "bottle (>=0.12.13)", "Django (>=2.2.0)", "Flask (>=0.12.5)"]
+docs = ["aiohttp (>=3.0.8)", "falcon (>=2.0.0)", "pyramid (>=1.9.1)", "tornado (>=4.5.2)", "bottle (>=0.12.13)", "Django (>=2.2.0)", "Flask (>=0.12.5)", "furo (==2021.8.11b42)", "sphinx-issues (==1.2.0)", "Sphinx (==4.1.2)"]
+dev = ["tox", "pre-commit (>=2.4,<3.0)", "flake8-bugbear (==21.4.3)", "flake8 (==3.9.2)", "mypy (==0.910)", "aiohttp (>=3.0.8)", "falcon (>=2.0.0)", "pyramid (>=1.9.1)", "tornado (>=4.5.2)", "bottle (>=0.12.13)", "Django (>=2.2.0)", "Flask (>=0.12.5)", "pytest-aiohttp (>=0.3.0)", "webtest-aiohttp (==2.0.0)", "webtest (==2.0.35)", "pytest"]
 
 [[package]]
 name = "werkzeug"
@@ -961,7 +961,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "2e04582675ef92ecdd288ff0cdcb500fefc20ae42160d92974c41c0c1b607d3b"
+content-hash = "fbc01210045a06378ba6fcda019e09cf88c31807c5fd8a0b2798eb2a761602f7"
 
 [metadata.files]
 aiohttp = [
@@ -1051,8 +1051,8 @@ alembic = [
     {file = "alembic-1.7.5.tar.gz", hash = "sha256:7c328694a2e68f03ee971e63c3bd885846470373a5b532cf2c9f1601c413b153"},
 ]
 apiflask = [
-    {file = "APIFlask-1.1.1-py3-none-any.whl", hash = "sha256:38a659c4896b8e0893dde7e4ef47660a06a4ee26fcea0d454b2e69feaa6981b3"},
-    {file = "APIFlask-1.1.1.tar.gz", hash = "sha256:be7470eb60db23a69c1d950d7887584bf266adca4d8069e4de58fd51b2385861"},
+    {file = "APIFlask-1.1.2-py3-none-any.whl", hash = "sha256:b65dc1e29810844ce6eb73e7310765c051da99af9055c4f5c3061af490e8a1e5"},
+    {file = "APIFlask-1.1.2.tar.gz", hash = "sha256:16fc7853f94070fa1029dc5dafe9592d36155c0764bfc6a8598ddfefd3788550"},
 ]
 apispec = [
     {file = "apispec-5.1.1-py3-none-any.whl", hash = "sha256:5bc5404b19259aeeb307ce9956e2c1a97722c6a130ef414671dfc21acd622afc"},
