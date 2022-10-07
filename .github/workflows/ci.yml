@@ -25,6 +25,7 @@ jobs:
           --health-retries 5
 
     steps:
+      - uses: docker/setup-buildx-action@v2
       - uses: actions/checkout@v2
       - uses: abatilo/actions-poetry@v2.0.0
         with:
@@ -41,5 +42,4 @@ jobs:
           poetry run python -m unittest discover .
         env:
           DATABASE_URL: postgres://scaffold:scaffold@postgres:5432/test
-      - name: Build docker
-        uses: docker/build-push-action@v3
+      - uses: docker/build-push-action@v3
