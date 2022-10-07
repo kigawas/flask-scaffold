@@ -19,7 +19,7 @@ COPY --chown=scaffold:scaffold *.py *.toml *.sh ./
 
 RUN sudo apk add --virtual .build-deps gcc g++ libffi-dev musl-dev && \
     curl -sSL https://install.python-poetry.org | python && \
-    $HOME/.poetry/bin/poetry install --no-dev && \
+    $HOME/.local/bin/poetry install --no-dev && \
     sudo apk --purge del .build-deps
 
 EXPOSE 5000
