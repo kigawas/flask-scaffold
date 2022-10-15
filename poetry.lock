@@ -344,7 +344,7 @@ Flask-SQLAlchemy = ">=1.0"
 
 [[package]]
 name = "flask-sqlalchemy"
-version = "3.0.1"
+version = "3.0.2"
 description = "Add SQLAlchemy support to your Flask application."
 category = "main"
 optional = false
@@ -980,7 +980,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=4.6)", "pytest-black (
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "c8c66a4d5fe6569c8def790e2917f6265403785a3e586a91174bfe2406e8f449"
+content-hash = "71bf43b4337b59d3e024b1a41e7e24c3aa805ed637e532929df7d516e7ad9568"
 
 [metadata.files]
 aiohttp = [
@@ -1192,8 +1192,8 @@ flask-migrate = [
     {file = "Flask_Migrate-3.1.0-py3-none-any.whl", hash = "sha256:a6498706241aba6be7a251078de9cf166d74307bca41a4ca3e403c9d39e2f897"},
 ]
 flask-sqlalchemy = [
-    {file = "Flask-SQLAlchemy-3.0.1.tar.gz", hash = "sha256:0a5d586774949856e4f1fe8be3a64c594615959e39e2b041e887bac5c756bc42"},
-    {file = "Flask_SQLAlchemy-3.0.1-py3-none-any.whl", hash = "sha256:649eddf17ae18814f87f33eb26d9d7b37412ec7ee67985873b3cf882aca099f5"},
+    {file = "Flask-SQLAlchemy-3.0.2.tar.gz", hash = "sha256:16199f5b3ddfb69e0df2f52ae4c76aedbfec823462349dabb21a1b2e0a2b65e9"},
+    {file = "Flask_SQLAlchemy-3.0.2-py3-none-any.whl", hash = "sha256:7d0cd9cf73e64a996bb881a1ebd01633fc5a6d11c36ea27f7b5e251dc45476e7"},
 ]
 frozenlist = [
     {file = "frozenlist-1.2.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:977a1438d0e0d96573fd679d291a1542097ea9f4918a8b6494b06610dfeefbf9"},
