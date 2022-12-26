@@ -30,7 +30,7 @@ mypy = "^0.990"
 ipython = "^7.34.0"
 black = "^22.10"
 flake8 = "^5.0.4"
-pre-commit = "^2.20.0"
+pre-commit = "^2.21.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
