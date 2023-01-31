@@ -12,7 +12,7 @@ python = "^3.7"
 # flask
 APIFlask = "^1.1.2"
 flask = "^2.2.2"
-flask-sqlalchemy = "^3.0.2"
+flask-sqlalchemy = "^3.0.3"
 flask-migrate = "^3.1.0"
 
 # server
