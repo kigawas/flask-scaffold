@@ -13,7 +13,7 @@ python = "^3.7"
 APIFlask = "^1.1.2"
 flask = "^2.2.2"
 flask-sqlalchemy = "^3.0.2"
-flask-migrate = "^3.1.0"
+flask-migrate = "^4.0.4"
 
 # server
 gunicorn = "^20.1.0"
