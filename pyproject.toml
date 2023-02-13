@@ -23,7 +23,7 @@ aiohttp_wsgi = "^0.10.0"
 # db
 psycopg2 = "^2.9.5"
 redis = "^4.3.5"
-hiredis = "^2.0.0"
+hiredis = "^2.2.2"
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.990"
