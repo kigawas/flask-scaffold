@@ -21,7 +21,7 @@ aiohttp = "^3.8.3"
 aiohttp_wsgi = "^0.10.0"
 
 # db
-psycopg2 = "^2.9.5"
+psycopg2 = "^2.9.9"
 redis = "^4.3.5"
 hiredis = "^2.0.0"
 
