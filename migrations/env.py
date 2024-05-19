@@ -19,7 +19,7 @@ logger = logging.getLogger("alembic.env")
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-from flask import current_app
+from flask import current_app  # noqa: E402
 
 config.set_main_option(
     "sqlalchemy.url", current_app.config.get("SQLALCHEMY_DATABASE_URI")
@@ -80,7 +80,7 @@ def run_migrations_online():
         connection=connection,
         target_metadata=target_metadata,
         process_revision_directives=process_revision_directives,
-        **current_app.extensions["migrate"].configure_args
+        **current_app.extensions["migrate"].configure_args,
     )
 
     try:

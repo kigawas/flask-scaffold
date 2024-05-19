@@ -1,40 +1,39 @@
 [tool.poetry]
+authors = [
+  "Weiliang Li <to.be.impressive@gmail.com>",
+]
+description = "A scaffold to speed up launching a flask project"
 name = "flask-scaffold"
 version = "0.1.0"
-description = "A scaffold to speed up launching a flask project"
-authors = [
-    "Weiliang Li <to.be.impressive@gmail.com>"
-]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.10"
 
 # flask
 APIFlask = "^1.1.2"
 flask = "^2.2.2"
-flask-sqlalchemy = "^3.0.2"
 flask-migrate = "^3.1.0"
+flask-sqlalchemy = "^3.0.2"
 
 # server
-gunicorn = "^20.1.0"
 aiohttp = "^3.8.3"
 aiohttp_wsgi = "^0.10.0"
+gunicorn = "^20.1.0"
 
 # db
+hiredis = "^2.0.0"
 psycopg2 = "^2.9.5"
 redis = "^4.3.5"
-hiredis = "^2.0.0"
 
-[tool.poetry.dev-dependencies]
-mypy = "^0.990"
-ipython = "^7.34.0"
-black = "^22.10"
-flake8 = "^5.0.4"
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.14.0"
+mypy = "^1.10.0"
 pre-commit = "^2.20.0"
+ruff = "^0.3.5"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
 
 [tool.isort]
 multi_line_output = 3

@@ -21,7 +21,6 @@ def _stderr_supports_color():
 
 
 class LogFormatter(logging.Formatter):
-
     DEFAULT_FORMAT = (
         "%(color)s[%(levelname)1.1s %(asctime)s %(module)s:%(lineno)d]"
         "%(end_color)s %(message)s"
@@ -42,7 +41,6 @@ class LogFormatter(logging.Formatter):
         color=True,
         colors=DEFAULT_COLORS,
     ):
-
         logging.Formatter.__init__(self, datefmt=datefmt)
         self._fmt = fmt
 
