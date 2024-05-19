@@ -24,4 +24,7 @@ class Production(Config):
     A_SPECIAL_CONFIG = ""
 
 
-CONFIG_MAP = {"development": Development, "production": Production}
+CONFIG_MAP = {
+    True: Development,  # debug mode
+    False: Production,
+}

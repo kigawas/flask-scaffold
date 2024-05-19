@@ -4,9 +4,7 @@ ENV USER scaffold
 ENV HOME /home/$USER
 
 RUN apk update && apk add --update sudo curl postgresql-dev && \
-    python -m pip install -U pip --no-cache-dir
-
-RUN adduser -D $USER \
+    python -m pip install -U pip --no-cache-dir && adduser -D $USER \
     && echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER \
     && chmod 0440 /etc/sudoers.d/$USER
 

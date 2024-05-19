@@ -20,7 +20,7 @@ def create_app(config=None):
     app = Flask(__name__)
 
     if config is None:
-        config = CONFIG_MAP[app.config["ENV"]]
+        config = CONFIG_MAP[app.config["DEBUG"]]
 
     app.config.from_object(config)
 

@@ -13,7 +13,7 @@ There is no silver bullet, so if other libraries or practice are preferred, you 
 
 ## Prerequisites
 
-- Python 3.7+
+- Python 3.10+
 
 - Poetry
 
@@ -32,15 +32,11 @@ There is no silver bullet, so if other libraries or practice are preferred, you 
 
 ### Create virtual environment with dependencies
 
-    python3 -m venv venv && source venv/bin/activate && poetry install
-
-### Specify development config (with debug mode on)
-
-    export FLASK_ENV=development
+    python3 -m venv .venv && source .venv/bin/activate && poetry install
 
 ### Run development flask server
 
-    flask run
+    flask run --debug
 
 ### Run development gunicorn server with aiohttp worker
 
@@ -57,10 +53,6 @@ There is no silver bullet, so if other libraries or practice are preferred, you 
 ### Run with docker compose
 
     docker-compose up --build
-
-### Format Python code with black
-
-    black . --exclude venv
 
 ### Run git pre-commit hooks
 
