@@ -29,7 +29,7 @@ redis = "^4.3.5"
 ipython = "^8.14.0"
 mypy = "^1.10.0"
 pre-commit = "^2.20.0"
-ruff = "^0.3.5"
+ruff = "^0.4.5"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
