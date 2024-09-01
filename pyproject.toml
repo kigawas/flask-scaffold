@@ -27,7 +27,7 @@ redis = "^5.0.4"
 
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.26.0"
-mypy = "^1.11.1"
+mypy = "^1.11.2"
 pre-commit = "^3.7.0"
 ruff = "^0.6.0"
 
