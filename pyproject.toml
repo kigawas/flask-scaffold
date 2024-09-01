@@ -18,7 +18,7 @@ flask-sqlalchemy = "^3.0.2"
 # server
 aiohttp = "^3.10.2"
 aiohttp_wsgi = "^0.10.0"
-gunicorn = "^22.0.0"
+gunicorn = "^23.0.0"
 
 # db
 hiredis = "^2.0.0"
