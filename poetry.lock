@@ -157,13 +157,13 @@ tz = ["backports.zoneinfo"]
 
 [[package]]
 name = "apiflask"
-version = "2.1.1"
+version = "2.2.1"
 description = "A lightweight web API framework based on Flask and marshmallow-code projects."
 optional = false
-python-versions = ">=3.8"
+python-versions = "*"
 files = [
-    {file = "APIFlask-2.1.1-py3-none-any.whl", hash = "sha256:8586c1f845f6b17f948ecbc6ea26837532cc32953379553c4a78bf9498b2c082"},
-    {file = "APIFlask-2.1.1.tar.gz", hash = "sha256:88db5a539cc155e35d9636d99b434d00ca6c0b23e7c87c8321ec9dc980535366"},
+    {file = "APIFlask-2.2.1-py3-none-any.whl", hash = "sha256:31619542dae6c7b86ca0cd0b1277ccaad68e99b69dfef201791b814432d26965"},
+    {file = "apiflask-2.2.1.tar.gz", hash = "sha256:9c7573fedbb75524396c5733d4b0c150d1839a5d52b905c15b6a36e030c44908"},
 ]
 
 [package.dependencies]
@@ -1746,4 +1746,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "92ca1c85f78497658a776914d38b2290cf16403be4e03e58b6f6c9374a6b799a"
+content-hash = "1b88e6c8f197139ca373ac2f269d857d9312be25a43aaa2a2de99a039fb8c1ad"
