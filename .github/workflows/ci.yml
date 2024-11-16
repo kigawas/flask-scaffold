@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: python:3.10
+    container: python:3.13
 
     services:
       postgres:
@@ -25,9 +25,9 @@ jobs:
           --health-retries 5
 
     steps:
-      - uses: docker/setup-buildx-action@v2
-      - uses: actions/checkout@v3
-      - uses: abatilo/actions-poetry@v2.0.0
+      - uses: docker/setup-buildx-action@v3
+      - uses: actions/checkout@v4
+      - uses: abatilo/actions-poetry@v2
         with:
           poetry-version: "1.8.3"
       - run: poetry install
@@ -37,4 +37,4 @@ jobs:
           poetry run python -m unittest discover .
         env:
           DATABASE_URL: postgres://scaffold:scaffold@postgres:5432/test
-      - uses: docker/build-push-action@v3
+      - uses: docker/build-push-action@v6

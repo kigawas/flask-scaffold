@@ -25,7 +25,7 @@ There is no silver bullet, so if other libraries or practice are preferred, you 
 - Blueprint templates to organize directory structure
 - Colorful logger in terminals, stolen from [tornado](https://github.com/tornadoweb/tornado/blob/master/tornado/log.py)
 - Gunicorn aiohttp server for production use
-- Integrated with static analysis and lint tools like `mypy`, `black`, `flake8` and git hook tool [`pre-commit`](https://pre-commit.com/#intro)
+- Integrated with static analysis and lint tools like `mypy` and `ruff`
 - Default [Github Actions](https://github.com/kigawas/flask-scaffold/actions) and [Heroku](https://scaffold-flask.herokuapp.com/) configuration
 
 ## Common tasks
@@ -53,7 +53,3 @@ There is no silver bullet, so if other libraries or practice are preferred, you 
 ### Run with docker compose
 
     docker-compose up --build
-
-### Run git pre-commit hooks
-
-    pre-commit run --all-files
