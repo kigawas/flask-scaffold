@@ -24,7 +24,7 @@ There is no silver bullet, so if other libraries or practice are preferred, you 
 - [APIFlask](https://apiflask.com/)
 - Blueprint templates to organize directory structure
 - Colorful logger in terminals, stolen from [tornado](https://github.com/tornadoweb/tornado/blob/master/tornado/log.py)
-- Gunicorn aiohttp server for production use
+- Gunicorn uvicorn server for production use
 - Integrated with static analysis and lint tools like `mypy` and `ruff`
 - Default [Github Actions](https://github.com/kigawas/flask-scaffold/actions) and [Heroku](https://scaffold-flask.herokuapp.com/) configuration
 
@@ -38,9 +38,13 @@ There is no silver bullet, so if other libraries or practice are preferred, you 
 
     flask run --debug
 
-### Run development gunicorn server with aiohttp worker
+### Run development uvicorn server
 
-    gunicorn -b :5000 aioapp:aioapp -k aiohttp.worker.GunicornWebWorker --reload
+    uvicorn asgi:app --port 5000 --reload
+
+### Run development gunicorn server
+
+    gunicorn -b :5000 asgi:app -k uvicorn.workers.UvicornWorker --reload
 
 ### Run production gunicorn server
 

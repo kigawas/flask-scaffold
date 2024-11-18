@@ -1,7 +1,7 @@
 FROM python:3.13-alpine
 
-ENV USER scaffold
-ENV HOME /home/$USER
+ENV USER=scaffold
+ENV HOME=/home/$USER
 
 RUN apk update && apk add --update sudo curl postgresql-dev && \
     python -m pip install -U pip --no-cache-dir && adduser -D $USER \
