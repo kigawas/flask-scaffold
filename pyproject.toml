@@ -1,40 +1,35 @@
 [tool.poetry]
-authors = [
-  "Weiliang Li <to.be.impressive@gmail.com>",
-]
+authors = ["Weiliang Li <to.be.impressive@gmail.com>"]
 description = "A scaffold to speed up launching a flask project"
 name = "flask-scaffold"
+package-mode = false
 version = "0.1.0"
 
 [tool.poetry.dependencies]
 python = "^3.10"
 
 # flask
-APIFlask = "^2.1.1"
-flask = "^3.0.3"
+APIFlask = "^2.2.1"
+flask = "^3.1.0"
 flask-migrate = "^4.0.7"
-flask-sqlalchemy = "^3.0.2"
+flask-sqlalchemy = "^3.1.1"
 
 # server
-aiohttp = "^3.10.2"
-aiohttp_wsgi = "^0.10.0"
-gunicorn = "^22.0.0"
+gunicorn = "^23.0.0"
+httptools = "^0.6.4"
+uvicorn = "^0.32.0"
+uvloop = {version = "0.21.0", markers = 'sys_platform != "win32"'}
 
 # db
-hiredis = "^2.0.0"
-psycopg2 = "^2.9.5"
-redis = "^5.0.4"
+hiredis = "^3.0.0"
+psycopg2-binary = "^2.9.10"
+redis = "^5.2.0"
 
 [tool.poetry.group.dev.dependencies]
-ipython = "^8.26.0"
-mypy = "^1.11.1"
-pre-commit = "^3.7.0"
-ruff = "^0.6.0"
+ipython = "^8.29.0"
+mypy = "^1.13.0"
+ruff = "^0.7.4"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core>=1.0.0"]
-
-[tool.isort]
-multi_line_output = 3
-profile = "black"
