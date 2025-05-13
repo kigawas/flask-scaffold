@@ -10,7 +10,7 @@ python = "^3.10"
 
 # flask
 APIFlask = "^2.2.1"
-flask = "^3.1.0"
+flask = "^3.1.1"
 flask-migrate = "^4.0.7"
 flask-sqlalchemy = "^3.1.1"
 
