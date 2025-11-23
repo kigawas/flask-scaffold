@@ -6,29 +6,30 @@ package-mode = false
 version = "0.1.0"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 
 # flask
-APIFlask = "^2.2.1"
+APIFlask = "^3.0.2"
 flask = "^3.1.1"
 flask-migrate = "^4.0.7"
 flask-sqlalchemy = "^3.1.1"
 
 # server
 gunicorn = "^23.0.0"
-httptools = "^0.6.4"
-uvicorn = "^0.37.0"
-uvloop = {version = "0.21.0", markers = 'sys_platform != "win32"'}
+httptools = "^0.7.1"
+uvicorn = "^0.38.0"
+uvloop = {version = "0.22.1", markers = 'sys_platform != "win32"'}
+asgiref = "^3.11.0"
 
 # db
 hiredis = "^3.0.0"
 psycopg2-binary = "^2.9.10"
-redis = "^5.2.0"
+redis = "^7.1.0"
 
 [tool.poetry.group.dev.dependencies]
-ipython = "^8.31.0"
-mypy = "^1.13.0"
-ruff = "^0.7.4"
+ipython = "^9.7.0"
+mypy = "^1.18.2"
+ruff = "^0.14.5"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
