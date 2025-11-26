@@ -1,8 +1,8 @@
 # flask-scaffold
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/81fa5c454ada4729bdbc3c1d8b2722bd)](https://app.codacy.com/app/kigawas/flask-scaffold)
-[![Github Actions](https://img.shields.io/github/checks-status/kigawas/flask-scaffold/master)](https://github.com/kigawas/flask-scaffold/actions)
-[![Docker Build Status](https://img.shields.io/docker/cloud/build/kigawas/flask-scaffold.svg)](https://hub.docker.com/r/kigawas/flask-scaffold/)
+[![Github Actions](https://img.shields.io/github/actions/workflow/status/kigawas/flask-scaffold/ci.yml)](https://github.com/kigawas/flask-scaffold/actions)
+[![Docker Build Automated](https://img.shields.io/docker/automated/kigawas/flask-scaffold.svg)](https://hub.docker.com/r/kigawas/flask-scaffold/)
 [![License](https://img.shields.io/github/license/kigawas/flask-scaffold.svg)](https://github.com/kigawas/flask-scaffold)
 
 A scaffold to speed up launching a flask project, set up with [minimal dependencies](https://github.com/kigawas/flask-scaffold/blob/master/pyproject.toml).
